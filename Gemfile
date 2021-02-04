@@ -8,8 +8,9 @@ gem 'webpacker',  '4.2.2'
 gem 'turbolinks', '5.2.1'
 gem 'jbuilder',   '2.10.0'
 # gem 'bootsnap',   '1.4.6', require: false
-gem 'rexml'
 gem 'bootsnap'
+gem 'rexml'
+gem 'rake'
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'
