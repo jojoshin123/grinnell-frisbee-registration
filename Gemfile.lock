@@ -213,7 +213,7 @@ DEPENDENCIES
   listen
   pg
   puma
-  rails
+  rails (= 6.1.1)
   rexml
   sass-rails (= 6.0.0)
   selenium-webdriver (= 3.142.7)
