@@ -206,7 +206,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bootsnap (= 1.4.6)
+  bootsnap
   byebug (= 11.1.3)
   capybara
   jbuilder (= 2.10.0)
