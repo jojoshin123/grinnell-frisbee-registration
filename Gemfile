@@ -13,6 +13,7 @@ gem 'jbuilder',   '2.10.0'
 gem 'bootsnap'
 gem 'rexml'
 gem 'rake'
+gem 'rails-controller-testing'
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'
