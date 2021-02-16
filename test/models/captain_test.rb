@@ -7,8 +7,7 @@ class CaptainTest < ActiveSupport::TestCase
   end
   
   test "check name length validation" do
-    cap = Captain.new
-    cap.name = "x" * 31
+    cap = Captain.new(name: "x" * 31, id: 1)
     assert_not cap.valid?, "Name is too long"
   end
 end

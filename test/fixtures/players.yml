@@ -2,6 +2,8 @@
 
 one:
   name: MyString
+  captain: one
 
 two:
   name: MyString
+  captain: two
