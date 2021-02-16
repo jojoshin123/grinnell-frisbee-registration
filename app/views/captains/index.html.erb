@@ -1,0 +1,10 @@
+<% provide(:title, "Captains") %>
+
+<div class="container">
+    <h1>Captains</h1>
+    <ul>
+        <% @caps.each do |cap| %>
+            <li><%= cap.name %></li>
+        <% end %>
+    </ul>
+</div>
