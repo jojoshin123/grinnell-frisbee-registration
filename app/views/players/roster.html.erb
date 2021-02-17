@@ -1,0 +1,43 @@
+<% provide(:title, "Roster") %>
+
+
+<div class="container">
+    <div class="banner">
+        <h1 class="text-content page-title">Roster</h1>
+        <div class="bg-image">
+            <%= image_tag @img %>
+        </div>
+    </div>
+    <div class="text-content" style="margin-top: 50px;">
+        <h4>Select the captain and type a player name to add them to the captain's roster:</h4>
+        <br/>
+        <div class="container">
+            <%= form_with(model: @Player, local: true) do |f| %>
+
+                <%# List the captain options%>
+                <%= f.label :captain, "Captain:" %>
+                <%= f.select :captain, options_for_select(@CaptainList.map{|c| c.name}) %>
+                
+                <%# Player text field%>
+                <%= f.label :name, "Player Name:" %>
+                <%= f.text_field :name%>
+                <%= f.submit "Add player to roster" %>
+
+            <% end %>
+        </div>
+
+        <%# List out all rosters %>
+        <div>
+            <h2 style="margin: 75px 0px 25px 0px;">List of all rosters:</h2>
+            <% @CaptainList.each do |c| %>
+                <h4><%= c.name %>'s roster:</h4>
+                <ul>
+                    <% c.players.each do |p| %>
+                        <li> <%= p.name %> </li>
+                    <% end %>
+                </ul>
+            <% end %>
+        </div>
+
+    </div>
+</div>

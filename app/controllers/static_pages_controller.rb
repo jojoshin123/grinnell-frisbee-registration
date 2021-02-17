@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
     @img = selectRandomImage
   end
 
-  def contact
+  def roster
     @img = selectRandomImage
   end
 
