@@ -16,6 +16,20 @@ input {
     border-radius: 5px;
 }
 
+select {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0px 50px 0px 0px !important;
+}
+
 input[type=submit] {
     margin-left: 10px;
+}
+
+//change Bootstrap alert banner
+.alert-danger {
+    background-color: #ff7979 !important;
+    color: black !important;
+    border-color: #ff7979 !important;
 }

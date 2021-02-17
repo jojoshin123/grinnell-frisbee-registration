@@ -16,12 +16,7 @@
 
                 <%# List the captain options%>
                 <%= f.label :captain, "Captain:" %>
-                <input list="captains" style="margin-right: 20px" >
-                <datalist id="captains">
-                    <% @CaptainList.each do |c| %>
-                        <option value=<%= c.name %> >
-                    <% end %>
-                </datalist>
+                <%= f.select :captain, options_for_select(@CaptainList.map{|c| c.name}) %>
                 
                 <%# Player text field%>
                 <%= f.label :name, "Player Name:" %>
@@ -31,10 +26,11 @@
             <% end %>
         </div>
 
+        <%# List out all rosters %>
         <div>
-            <h2 style="margin: 100px 0px 25px 0px;">List of all rosters:</h2>
+            <h2 style="margin: 75px 0px 25px 0px;">List of all rosters:</h2>
             <% @CaptainList.each do |c| %>
-                <h4><%= c.name %></h4>
+                <h4><%= c.name %>'s roster:</h4>
                 <ul>
                     <% c.players.each do |p| %>
                         <li> <%= p.name %> </li>
@@ -42,5 +38,6 @@
                 </ul>
             <% end %>
         </div>
+
     </div>
 </div>

@@ -9,13 +9,6 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert File.exist?("app/assets/images/" + assigns(:img)) # check if @img exists in images directory
   end
 
-  test "get contact and check dynamic image" do
-    get contact_url
-    assert_response :success
-    assert_select "img" # check img HTML element
-    assert File.exist?("app/assets/images/" + assigns(:img)) # check if @img exists in images directory
-  end
-
   test "get about and check dynamic image" do
     get about_url
     assert_response :success
