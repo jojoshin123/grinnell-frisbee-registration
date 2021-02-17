@@ -3,7 +3,7 @@
 class PlayerTest < ActiveSupport::TestCase
 
   test "should be valid" do
-    cap = Captain.new(name:"Foo", id:1) # init Captain for player
+    cap = Captain.new(name:"Foo", id:11) # init Captain for player
     player = cap.player.build(name:"Player")
     assert player.valid?
   end
