@@ -117,4 +117,17 @@ body {
     width: 100%;
     padding: 30px 30px 60px 30px;
     margin-top: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer li {
+    list-style-type: none;
+    margin: 5px;
+}
+
+.footer a {
+    color: black;
+    border-radius: 5px;
 }
