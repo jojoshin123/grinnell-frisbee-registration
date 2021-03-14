@@ -14,6 +14,7 @@ gem 'bootsnap'
 gem 'rexml'
 gem 'rake'
 gem 'rails-controller-testing'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'

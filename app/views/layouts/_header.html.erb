@@ -1,9 +1,14 @@
 <header class="navbar navbar-fixed-top navbar-light bg-primary">
     <nav>
-      <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home", "/" %></li>
             <li><%= link_to "Roster", "/roster" %></li>
             <li><%= link_to "About", "/about" %></li>
+            <% if logged_in? %>
+                <li><%= link_to "Your Profile", current_captain %></li>
+            <% else %>
+                <li><%= link_to "Captain Login", "/login" %></li>
+            <% end %>
         </ul>
     </nav>
 </header>

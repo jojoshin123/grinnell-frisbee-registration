@@ -1,7 +1,6 @@
 class StaticPagesController < ApplicationController
 
   def home
-    @img = selectRandomImage
   end
 
   def roster
