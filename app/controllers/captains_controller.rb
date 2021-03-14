@@ -1,6 +1,5 @@
 class CaptainsController < ApplicationController
-    def index
-        cap_list = Captain.all
-        @caps = cap_list
+    def show
+        @captain = Captain.find(params[:id])
     end
 end

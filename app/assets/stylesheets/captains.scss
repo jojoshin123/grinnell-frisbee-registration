@@ -1,3 +1,21 @@
 // Place all the styles related to the Captains controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+$background-color-darker: rgb(165, 64, 64);
+.profile-header {
+    text-align: center;
+    padding: 50px 0px 50px 0px;
+}
+
+.player-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 20px 20px;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: rgb(255, 196, 196);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+// .edit-buttons {
+// }
