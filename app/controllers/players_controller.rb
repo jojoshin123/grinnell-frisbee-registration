@@ -22,6 +22,14 @@ class PlayersController < ApplicationController
         redirect_to '/roster'
     end
 
+    def destroy
+        playerID = params[:id]
+        playerName = Player.find_by(id: params[:id]).name
+        Player.destroy(playerID)
+        flash[:success]= "Player " + playerName + " was successfully deleted!"
+        redirect_to current_captain
+    end
+
 
     private
         # selectRandomImage defines an array of all images in the app/assets/images directory and selects a random element

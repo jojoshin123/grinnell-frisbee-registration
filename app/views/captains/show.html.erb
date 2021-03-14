@@ -2,19 +2,27 @@
 
 <div class="profile-header container">
     <h1><%= @captain.name %></h1>
+    <div class="profile-actions" style="margin-top: 30px;">
+        <%# <button class="profile-buttons" style="margin-right: 15px;">Edit Profile</button> %>
+        <%= button_to "Logout", '/login', method: :delete, class: "profile-buttons" %>
+    </div>
 </div>
 
 <div class="container">
     <ul>
-         <h3>Roster:<h3>
-         <ul>
+        <h3>Roster:<h3>
+        <ul>
             <% @captain.players.each do |player| %>
                 <li>
                     <div class="player-card">
                         <%= player.name %>
-                        <div class="edit-buttons">
-                            <button style="margin-right: 15px">Edit</button>
-                            <button>Delete</button>
+                        <div>
+                            <%# <button class="edit-buttons" style="margin-right: 15px">Edit</button> %>
+                            <%= button_to "Delete", '/players', 
+                                method: :delete, 
+                                class: "edit-buttons", 
+                                params: { id: player.id }, 
+                                data: { confirm: "Are you sure you want to delete this player?" } %>
                         </div>
                     </div>
                 </li>

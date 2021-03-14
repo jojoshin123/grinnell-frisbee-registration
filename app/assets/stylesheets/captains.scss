@@ -1,6 +1,7 @@
 // Place all the styles related to the Captains controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+$background-color: rgb(255, 226, 226);
 $background-color-darker: rgb(165, 64, 64);
 .profile-header {
     text-align: center;
@@ -17,5 +18,29 @@ $background-color-darker: rgb(165, 64, 64);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
-// .edit-buttons {
-// }
+.profile-buttons {
+    font-size: 130%;
+    padding: 10px;
+    color: $background-color;
+    background-color: rgb(165, 64, 64);
+    border-radius: 10px;
+}
+
+.edit-buttons {
+    font-size: 70%;
+    font-weight: normal;
+    padding: 7px;
+    color: $background-color;
+    background-color: rgb(165, 64, 64);
+    border-radius: 10px;
+}
+
+.edit-buttons:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+.profile-buttons:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+}

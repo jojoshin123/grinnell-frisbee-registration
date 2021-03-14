@@ -16,4 +16,10 @@ module SessionsHelper
     def logged_in?
         return !current_captain.nil?
     end
+
+    def log_out
+        # session.delete(:captain_id)
+        session.clear
+        @current_captain = nil 
+    end
 end

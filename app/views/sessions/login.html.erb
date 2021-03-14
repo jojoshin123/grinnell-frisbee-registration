@@ -5,11 +5,13 @@
 </div>
 
 <div class="container">
-    <%= form_with(url: '/login', scope: :session, local: true) do |f| %>
-        <%= f.label :email %>
-        <%= f.email_field :email %>
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-        <%= f.submit "Login" %>
-    <% end %>
+        <%= form_with(url: '/login', scope: :session, local: true) do |f| %>
+            <div class="login-form">
+                <%= f.label :email, class: "f-label" %>
+                <%= f.email_field :email, class: "f-input"  %>
+                <%= f.label :password, class: "f-label"%>
+                <%= f.password_field :password, class: "f-input" %>
+                <%= f.submit "Login", class: "f-label" %>
+            </div>
+        <% end %>
 </div> 
